@@ -1,0 +1,10 @@
+{
+	"datastructures": {
+		"name": "array", 
+		"methods": [
+			{
+				"pop": "O(1)"
+			}
+		]
+	}
+}
