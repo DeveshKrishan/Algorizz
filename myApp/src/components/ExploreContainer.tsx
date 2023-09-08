@@ -4,8 +4,8 @@ import { Route, Redirect } from 'react-router';
 import { home, play, person } from 'ionicons/icons';
 
 
-import QuizPage from "./Quiz"
-import ProfilePage from "./Profile"
+import QuizPage from "../pages/Quiz"
+import ProfilePage from "../pages/Profile"
 
 function Example() {
   return (
