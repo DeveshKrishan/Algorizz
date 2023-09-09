@@ -17,8 +17,17 @@ async function run() {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
     // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
+    const database = client.db('Algorizz'); // Replace 'your-database-name' with your actual database name
+    const collection = database.collection('Quiz-Topics');
+    // Fetch all documents from the collection
+    const query = {};
+    let allData = await collection.find(query).toArray();
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
+    const datastructuresNames = [];
+    allData = allData[0]['topics'];
+    // console.log(Object.keys(allData));
+    console.log(allData)
+    
   } finally {
     // Ensures that the client will close when you finish/error
     await client.close();
